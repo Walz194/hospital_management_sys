@@ -7,6 +7,7 @@ import side_menu
 import tabs_area
 import status_bar
 
+
 class HospitalMgmt():
 
     def __init__(self):
@@ -26,11 +27,12 @@ class HospitalMgmt():
         menu_bar.MenuBar(window)
         tool_bar.ToolBar(window)
 
-        side_menu.SideMenu(centralwidget,gridLayout)
+        tabs = tabs_area.TabsArea(centralwidget, gridLayout)
+
+        side_menu.SideMenu(centralwidget, gridLayout, tabs)
         verticalLayout.addLayout(gridLayout)
         window.setCentralWidget(centralwidget)
 
-        tabs_area.TabsArea(centralwidget,gridLayout)
         status_bar.StatusBar(window)
 
         window.show()

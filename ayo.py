@@ -31,6 +31,7 @@ class Ui_MainWindow(object):
         self.right_tabwidget.addTab(self.tab_2, "")
         self.gridLayout.addWidget(self.right_tabwidget, 1, 1, 1, 1)
         self.left_menu_Tree = QtWidgets.QTreeWidget(self.centralwidget)
+        self.left_menu_Tree.itemDoubleClicked.connect(lambda x: print(x.text(0)) )
         self.left_menu_Tree.setMinimumSize(QtCore.QSize(200, 0))
         self.left_menu_Tree.setMaximumSize(QtCore.QSize(300, 16777215))
         self.left_menu_Tree.setStyleSheet("QTreeWidget{\n"
@@ -101,6 +102,9 @@ class Ui_MainWindow(object):
         self.left_menu_Tree.topLevelItem(0).child(1).setText(0, _translate("MainWindow", "Pencil"))
         self.left_menu_Tree.topLevelItem(0).child(2).setText(0, _translate("MainWindow", "Biro"))
         self.left_menu_Tree.topLevelItem(0).child(3).setText(0, _translate("MainWindow", "Eraser"))
+
+        # print(self.left_menu_Tree.topLevelItem(0).child(3).text(0))
+
         self.left_menu_Tree.topLevelItem(0).child(4).setText(0, _translate("MainWindow", "Divider"))
         self.left_menu_Tree.topLevelItem(0).child(5).setText(0, _translate("MainWindow", "Mathset"))
         self.left_menu_Tree.topLevelItem(1).setText(0, _translate("MainWindow", "School Members"))

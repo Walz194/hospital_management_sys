@@ -28,7 +28,7 @@ class MenuBar():
         walz_options = bar.addMenu("Walz Clinic Options")
 
         general = walz_options.addMenu('General')
-        general_settings = QAction('General Setting',parent)
+        general_settings = QAction('General Settings',parent)
         general.addAction(general_settings)
         general_master = QAction('OP Settings Master',parent)
         general.addAction(general_master)
