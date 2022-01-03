@@ -44,7 +44,6 @@ class SideMenu:
         # An alternative is to pass the parent and the string in the TreeWidgetItem instantiation. Then we would not need
         # to add the addChild method.
         self.general_2 = QTreeWidgetItem(self.general, ["OP Settings Master"])
-        self.general_2.setText(0,'OP Setting')
         self.general_3 = QTreeWidgetItem(self.general, ["General Voucher"])
         self.general_4 = QTreeWidgetItem(self.general, ["Work Shop Form"])
         self.general_5 = QTreeWidgetItem(self.general, ["Photo Scanning Utility"])

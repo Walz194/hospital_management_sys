@@ -1,6 +1,7 @@
 from PyQt5.QtCore import QSize
 from PyQt5.QtWidgets import *
-from dialogs import dialog_maps
+from dialogs import dialog_maps,dialog_open_states
+
 
 
 class TabsArea:
@@ -13,7 +14,9 @@ class TabsArea:
 
         # Code to ensure that the tab is destroyed on click
         self.right_tabwidget.tabCloseRequested.connect(lambda index: self.right_tabwidget.removeTab(index))
+
         layout.addWidget(self.right_tabwidget, 1, 1, 1, 1)
 
     def addTabs(self,text):
         dialog_maps.on_tree_item_clicked(self.right_tabwidget,text)
+
