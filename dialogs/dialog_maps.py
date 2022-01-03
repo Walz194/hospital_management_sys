@@ -1,8 +1,10 @@
+from dialogs import general_settings
 
-def on_tree_item_clicked(text):
+def on_tree_item_clicked(tabwidget,text):
 
     # General Methods
     if text == 'General Settings':
+        tabwidget.addTab(general_settings.GeneralSettingsWidget(),text)
         # Do this
         print('Ayo is dumb')
 

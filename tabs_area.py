@@ -11,10 +11,9 @@ from dialogs import dialog_maps
 class TabsArea:
 
     def __init__(self,parent,layout):
-
+        self.p = parent
         self.right_tabwidget = QTabWidget(parent)
-        self.tab_2 = QWidget()
-        self.tab_1 = QWidget()
+        self.right_tabwidget.setTabsClosable(True)
         self.init_UI()
         layout.addWidget(self.right_tabwidget, 1, 1, 1, 1)
 
@@ -37,7 +36,7 @@ class TabsArea:
         self.right_tabwidget.setTabText(0,'Alrighty')
 
     def addTabs(self,text):
-        tab = QWidget()
-        self.right_tabwidget.addTab(tab,text)
+        # self.right_tabwidget.addTab(self.right_tabwidget,text)
+        # self.right_tabwidget.
         # print(text)
-        dialog_maps.on_tree_item_clicked(text)
+        dialog_maps.on_tree_item_clicked(self.right_tabwidget,text)
