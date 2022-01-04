@@ -12,6 +12,8 @@ class HospitalMgmt():
 
     def __init__(self):
         app = QApplication(sys.argv)
+        with open('./styles/styles.qss','r') as f:
+            app.setStyleSheet(f.read())
 
         # Window formating
         window = QMainWindow()

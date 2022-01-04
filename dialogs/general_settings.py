@@ -1,4 +1,6 @@
 from PyQt5 import QtGui, QtCore
+from PyQt5.QtCore import QSize
+from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QWidget, QHBoxLayout, QListWidget, QVBoxLayout, QLabel, QSizePolicy, QPushButton, QComboBox, QLineEdit
 
 
@@ -109,6 +111,32 @@ class GeneralSettingsWidget(QWidget):
         self.input_form_wrap.addLayout(self.buttons_wrap)
         self.right_side_wrap.addLayout(self.input_form_wrap)
         self.horizontalLayout_7.addLayout(self.right_side_wrap)
+
+        self.side_button_wrap = QVBoxLayout()
+        self.side_button_wrap.setContentsMargins(-1, 30, -1, 250)
+        self.side_button_wrap.setSpacing(6)
+        self.side_button_wrap.setObjectName("side_button_wrap")
+        self.down_btn = QPushButton(self)
+        self.down_btn.setIcon(QIcon('./icons/down-right-arrow.png'))
+        self.down_btn.setIconSize(QSize(30, 30))
+        self.down_btn.setObjectName("down_btn")
+        self.side_button_wrap.addWidget(self.down_btn)
+        self.up_btn = QPushButton(self)
+        self.up_btn.setObjectName("up_btn")
+        self.up_btn.setIcon(QIcon('./icons/upward-arrow.png'))
+        self.up_btn.setIconSize(QSize(30, 30))
+        self.side_button_wrap.addWidget(self.up_btn)
+        self.save_btn_2 = QPushButton(self)
+        self.save_btn_2.setObjectName("save_btn_2")
+        self.save_btn_2.setIcon(QIcon('./icons/diskette.png'))
+        self.save_btn_2.setIconSize(QSize(30, 30))
+        self.side_button_wrap.addWidget(self.save_btn_2)
+        self.delete_2 = QPushButton(self)
+        self.delete_2.setObjectName("delete_2")
+        self.side_button_wrap.addWidget(self.delete_2)
+        self.delete_2.setIcon(QIcon('./icons/cancel.png'))
+        self.delete_2.setIconSize(QSize(30, 30))
+        self.horizontalLayout_7.addLayout(self.side_button_wrap)
 
         self.data_id.setText("Data ID")
         self.edit_change_btn.setText("Edit")
