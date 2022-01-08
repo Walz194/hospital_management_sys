@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>785</width>
+    <height>616</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_13">
+   <item>
+    <widget class="QLabel" name="op_settings_title">
+     <property name="text">
+      <string>Out Patient Settings Master</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="top_group">
+     <item>
+      <widget class="QListWidget" name="source_list"/>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="top_group_buttons">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QPushButton" name="move_selected">
+           <property name="text">
+            <string>PushButton</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="move_all">
+           <property name="text">
+            <string>PushButton</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QPushButton" name="return_selected">
+           <property name="text">
+            <string>PushButton</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="return_all">
+           <property name="text">
+            <string>PushButton</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QListWidget" name="destination_list"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QFrame" name="middle_group">
+     <property name="styleSheet">
+      <string notr="true">#frame{
+	background: white;
+	border: 1px solid black;
+	padding: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="2">
+       <layout class="QVBoxLayout" name="verticalLayout_12">
+        <item>
+         <widget class="QPushButton" name="op_save">
+          <property name="text">
+           <string>Save</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="op_delete">
+          <property name="text">
+           <string>Delete</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="op_clear">
+          <property name="text">
+           <string>Clear</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="op_close">
+          <property name="text">
+           <string>Close</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_10">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QLabel" name="op_category_label">
+              <property name="text">
+               <string>OP. Category</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="op_category">
+              <property name="maximumSize">
+               <size>
+                <width>192</width>
+                <height>16777215</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <item>
+             <widget class="QLabel" name="op_validity_days_label">
+              <property name="text">
+               <string>OP. Validity Days</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="op_validity_days">
+              <property name="maximumSize">
+               <size>
+                <width>185</width>
+                <height>16777215</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <item>
+             <widget class="QLabel" name="op_max_visit_label">
+              <property name="text">
+               <string>OP. Max Visit No.</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="op_max_visit">
+              <property name="maximumSize">
+               <size>
+                <width>192</width>
+                <height>16777215</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Minimum</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_11">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <item>
+             <widget class="QLabel" name="op_renewal_label">
+              <property name="text">
+               <string>OP. Renewal</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="op_renewal">
+              <property name="maximumSize">
+               <size>
+                <width>191</width>
+                <height>16777215</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <item>
+             <widget class="QLabel" name="op_perday_visit_label">
+              <property name="text">
+               <string>OP. Per Day Visit No.</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="op_perday_visit">
+              <property name="maximumSize">
+               <size>
+                <width>191</width>
+                <height>16777215</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_9">
+            <item>
+             <widget class="QLabel" name="date_label">
+              <property name="text">
+               <string>Date</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDateEdit" name="dateEdit">
+              <property name="maximumSize">
+               <size>
+                <width>191</width>
+                <height>16777215</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="1">
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Minimum</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>280</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="op_table">
+     <row>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>Name</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>OP.Category</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Address</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Renewal</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Validity</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Max Visit</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Per Day</string>
+      </property>
+     </column>
+     <item row="0" column="0">
+      <property name="text">
+       <string>Kemi</string>
+      </property>
+     </item>
+     <item row="0" column="1">
+      <property name="text">
+       <string>General</string>
+      </property>
+     </item>
+     <item row="0" column="2">
+      <property name="text">
+       <string>Isokan ext. Akobo Ojuring</string>
+      </property>
+     </item>
+     <item row="0" column="3">
+      <property name="text">
+       <string>Y</string>
+      </property>
+     </item>
+     <item row="0" column="4">
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item row="0" column="5">
+      <property name="text">
+       <string>4</string>
+      </property>
+     </item>
+     <item row="0" column="6">
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+     <item row="1" column="0">
+      <property name="text">
+       <string>Oyinda</string>
+      </property>
+     </item>
+     <item row="1" column="1">
+      <property name="text">
+       <string>Special</string>
+      </property>
+     </item>
+     <item row="1" column="2">
+      <property name="text">
+       <string>Olorundas</string>
+      </property>
+     </item>
+     <item row="1" column="3">
+      <property name="text">
+       <string>Y</string>
+      </property>
+     </item>
+     <item row="1" column="4">
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item row="1" column="5">
+      <property name="text">
+       <string>10</string>
+      </property>
+     </item>
+     <item row="1" column="6">
+      <property name="text">
+       <string>4</string>
+      </property>
+     </item>
+     <item row="2" column="0">
+      <property name="text">
+       <string>Ayo</string>
+      </property>
+     </item>
+     <item row="2" column="1">
+      <property name="text">
+       <string>General</string>
+      </property>
+     </item>
+     <item row="2" column="2">
+      <property name="text">
+       <string>Akobo</string>
+      </property>
+     </item>
+     <item row="2" column="3">
+      <property name="text">
+       <string>Y</string>
+      </property>
+     </item>
+     <item row="2" column="4">
+      <property name="text">
+       <string>7</string>
+      </property>
+     </item>
+     <item row="2" column="5">
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+     <item row="2" column="6">
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item row="3" column="0">
+      <property name="text">
+       <string>Wale</string>
+      </property>
+     </item>
+     <item row="3" column="1">
+      <property name="text">
+       <string>Special</string>
+      </property>
+     </item>
+     <item row="3" column="2">
+      <property name="text">
+       <string>America</string>
+      </property>
+     </item>
+     <item row="3" column="3">
+      <property name="text">
+       <string>Y</string>
+      </property>
+     </item>
+     <item row="3" column="4">
+      <property name="text">
+       <string>10</string>
+      </property>
+     </item>
+     <item row="3" column="5">
+      <property name="text">
+       <string>30</string>
+      </property>
+     </item>
+     <item row="3" column="6">
+      <property name="text">
+       <string>30</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

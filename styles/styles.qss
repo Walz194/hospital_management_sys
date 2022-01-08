@@ -1,3 +1,10 @@
 QPushButton#down_btn,QPushButton#up_btn,QPushButton#save_btn_2,QPushButton#delete_2{
     border-color: gray;
 }
+
+#frame{
+    background: white;
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 10px;margin-bottom: 10px;
+}

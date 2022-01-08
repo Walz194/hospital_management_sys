@@ -1,5 +1,6 @@
 from dialogs import general_settings
 from dialogs import dialog_open_states
+from dialogs import op_settings
 from PyQt5.QtWidgets import QWidget
 
 
@@ -25,7 +26,7 @@ def on_tree_item_clicked(tabwidget,text):
 
     if text == 'OP Settings Master':
         if dialog_open_states.op_settings == False:
-            tabwidget.addTab(QWidget(), text)
+            tabwidget.addTab(op_settings.OPSettings(), text)
             dialog_open_states.involved_index = dialog_open_states.get_indices(tabwidget,text)[0]
             tabwidget.setCurrentIndex(dialog_open_states.involved_index)
             dialog_open_states.op_settings = True
@@ -34,7 +35,7 @@ def on_tree_item_clicked(tabwidget,text):
                 dialog_open_states.involved_index = dialog_open_states.get_indices(tabwidget,text)[0]
             except IndexError:
                 # dialog_open_states.op_settings = False
-                tabwidget.addTab(QWidget(), text)
+                tabwidget.addTab(op_settings.OPSettings(), text)
             tabwidget.setCurrentIndex(dialog_open_states.involved_index)
         # Do this
 
