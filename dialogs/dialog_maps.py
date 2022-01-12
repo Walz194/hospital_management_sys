@@ -1,7 +1,7 @@
 from dialogs import general_settings
 from dialogs import dialog_open_states
 from dialogs import op_settings
-from PyQt5.QtWidgets import QWidget
+from dialogs import general_voucher
 
 
 
@@ -40,8 +40,19 @@ def on_tree_item_clicked(tabwidget,text):
         # Do this
 
     if text == 'General Voucher':
-        # Do this
-        pass
+        if dialog_open_states.general_voucher == False:
+            tabwidget.addTab(general_voucher.GeneralVoucher(), text)
+            dialog_open_states.involved_index = dialog_open_states.get_indices(tabwidget, text)[0]
+            tabwidget.setCurrentIndex(dialog_open_states.involved_index)
+            dialog_open_states.general_voucher = True
+        else:
+            try:
+                dialog_open_states.involved_index = dialog_open_states.get_indices(tabwidget, text)[0]
+            except IndexError:
+                # dialog_open_states.general_voucher = False
+                tabwidget.addTab(general_voucher.GeneralVoucher(), text)
+            tabwidget.setCurrentIndex(dialog_open_states.involved_index)
+
     if text == 'Work Shop Form':
         # Do this
         pass
