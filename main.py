@@ -26,10 +26,12 @@ class HospitalMgmt():
         gridLayout = QGridLayout()
         verticalLayout = QVBoxLayout(centralwidget)
 
-        menu_bar.MenuBar(window)
+        # hot_stuff = tabs_area.TabsArea()
         tool_bar.ToolBar(window)
 
         tabs = tabs_area.TabsArea(centralwidget, gridLayout)
+        # tabs.right_tabwidget.hide()
+        menu_bar.MenuBar(window,tabs)
 
         side_menu.SideMenu(centralwidget, gridLayout, tabs)
         verticalLayout.addLayout(gridLayout)

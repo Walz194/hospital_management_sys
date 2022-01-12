@@ -2,8 +2,9 @@ from PyQt5.QtWidgets import QAction,qApp
 
 class MenuBar():
 
-    def __init__(self,parent):
+    def __init__(self,parent,tabsObj):
         bar = parent.menuBar()
+        self.tabsObj = tabsObj
 
         # System Menu
         system = bar.addMenu("System")
@@ -26,9 +27,15 @@ class MenuBar():
 
         # Walz_Options Menu
         walz_options = bar.addMenu("Walz Clinic Options")
-
         general = walz_options.addMenu('General')
+
+
+
+
         general_settings = QAction('General Settings',parent)
+        # general_settings.triggered.connect(self.actionClicked)
+        # general_settings.triggered.connect(lambda: self.tabsObj.addTabs(general_settings.text()))
+        general_settings.triggered.connect(lambda: self.actionClicked(general_settings))
         general.addAction(general_settings)
         general_master = QAction('OP Settings Master',parent)
         general.addAction(general_master)
@@ -210,3 +217,6 @@ class MenuBar():
         exit.setStatusTip('Exit application')
         exit.triggered.connect(qApp.quit)
         bar.addAction(exit)
+
+    def actionClicked(self,checked):
+        self.tabsObj.addTabs(checked.text())
